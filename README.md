@@ -129,16 +129,31 @@ Invalid form values are handled appropriately.
 
 Click the links below to view the screenshots.
 
-1. [Dashboard](screenshots/01-dashboard.png)
-2. [Student Directory](screenshots/02-student-directory.png)
-3. [Add Student Form](screenshots/03-add-student-form.png)
-4. [Student Added Successfully](screenshots/04-student-added.png)
-5. [Edit Student](screenshots/05-edit-student.png)
-6. [Search and Filter](screenshots/06-search-filter.png)
-7. [CSV Export](screenshots/07-csv-export.png)
-8. [Postman API Response](screenshots/08-postman-api.png)
-9. [Database Records](screenshots/09-database-records.png)
-10. [Project Repository Structure](screenshots/project-structure.png)
+1. Dashboard
+ <img width="1917" height="961" alt="01-dashboard" src="https://github.com/user-attachments/assets/189db4a0-4c32-4ede-be6b-d55c76ac6e24" />
+
+2. Student Directory
+ <img width="1915" height="962" alt="02-student-directory" src="https://github.com/user-attachments/assets/2f4f845e-cd7d-441c-8210-ce29eedc9831" />
+
+3. Add Student Form
+ <img width="1910" height="966" alt="03-add-student-form" src="https://github.com/user-attachments/assets/8f8c8fdb-8775-4e7e-bc96-19973cf9cbfd" />
+
+4. Student Added Successfully <img width="1882" height="631" alt="04-student-added" src="https://github.com/user-attachments/assets/812344b7-055e-4531-aecb-3e7e6272fb7b" />
+
+5. Edit Student<img width="1632" height="970" alt="05-edit-student" src="https://github.com/user-attachments/assets/5a891c6c-7ad7-447e-863c-791acdda5dad" />
+
+6. Search and Filter<img width="1895" height="872" alt="06-search-filter" src="https://github.com/user-attachments/assets/768e2fbd-f883-47de-ab77-faf85b32c8f2" />
+
+7. CSV Export<img width="1906" height="965" alt="csv-export" src="https://github.com/user-attachments/assets/cb3155c5-d815-43b0-9567-7802ee62ef7b" />
+
+<img width="1905" height="956" alt="csv-export-report" src="https://github.com/user-attachments/assets/7a0867e2-72d6-4db7-9b25-0d68bb4abb79" />
+
+8. Postman API Response
+<img width="1907" height="995" alt="08-postman-api" src="https://github.com/user-attachments/assets/cd5e572d-f342-4b77-bb96-d57c51fcec06" />
+
+9. Database Records <img width="1917" height="937" alt="09-database-records" src="https://github.com/user-attachments/assets/19755a5f-6370-4b00-aa14-89b915244d29" />
+
+
 
 🔒 Security Notes
 
