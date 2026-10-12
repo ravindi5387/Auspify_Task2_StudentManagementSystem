@@ -1,64 +1,174 @@
-# StudentHub — Student Management System
+StudentHub --- Student Management System
 
-A light-blue, responsive full-stack Student Management System for Auspify Technologies Full Stack Development Internship — Task 2.
+A full-stack Student Management System developed for Auspify
+Technologies' Full Stack Development Internship --- Task 2. StudentHub
+provides a clean interface to manage student records through a React
+frontend, Express REST API, and PostgreSQL database.
 
-## Features
-- Admin dashboard and student statistics
-- Student CRUD: create, view, edit, delete
-- Search by student ID, name, email, course
-- Filter by course and study year
-- Client/server validation and duplicate ID/email handling
-- Neon PostgreSQL support, with schema and seed examples
-- Responsive light-blue admin interface
-- REST API and health check
-- Admin demo login (front-end demo only; see security note)
+✨ Features
 
-## Tech stack
-React + TypeScript + Vite, Node.js + Express + TypeScript, PostgreSQL (Neon compatible).
+Dashboard overview of student records.
 
-## 1. Database setup (Neon)
-Use your existing Neon project/database. In Neon SQL Editor, run `database/schema.sql` (it creates the `students` table if missing and inserts sample rows only if absent). This is PostgreSQL SQL, not MySQL SQL.
+Create, view, update, and delete student records.
 
-## 2. Backend
-Open a terminal in `backend`:
-```bash
+Search and filter students by available course/year fields.
+
+Export the filtered student list to CSV.
+
+Validate student information before saving.
+
+Persist student records in PostgreSQL.
+
+REST API for student operations.
+
+Clean, light-themed interface.
+
+🛠️ Technology Stack
+
+Layer      Technologies
+
+Frontend   React, TypeScript, Vite, CSS
+Backend    Node.js, Express.js, TypeScript
+Database   PostgreSQL (Neon-compatible)
+HTTP       REST API, Axios
+Tools      Postman, Git, GitHub, Visual Studio Code
+
+🏗️ System Architecture
+
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/480b270b-2ece-448f-b9fa-d794ca3a2839" />
+
+
+📁 Repository Structure
+
+<img width="1312" height="1199" alt="image" src="https://github.com/user-attachments/assets/62ccd2bd-8ba6-4f78-a440-58865a54df31" />
+
+🚀 Local Setup
+
+Prerequisites
+
+Node.js and npm
+
+Git
+
+PostgreSQL database (local PostgreSQL or Neon)
+
+Visual Studio Code or another code editor
+
+1. Clone the repository
+
+git clone <YOUR_GITHUB_REPOSITORY_URL>
+cd student-management-system-liteblue
+
+Replace <YOUR_GITHUB_REPOSITORY_URL> with your actual GitHub
+repository URL.
+
+2. Configure the database
+
+Create/select a PostgreSQL database. Copy the example environment file:
+
+copy backend\.env.example backend\.env
+
+Open backend/.env and enter your own database connection string and
+required environment values. If the database has not been initialized,
+use database/schema.sql to create the required table(s).
+
+Never commit .env files or publish database credentials.
+
+3. Start the backend
+
+cd backend
 npm install
-```
-Create `backend/.env` based on `.env.example` and paste your Neon connection string:
-```env
-PORT=5000
-DATABASE_URL=postgresql://USER:PASSWORD@HOST/DBNAME?sslmode=require
-FRONTEND_ORIGIN=http://localhost:5173
-```
-Run:
-```bash
 npm run dev
-```
-Check `http://localhost:5000/api/health` and `http://localhost:5000/api/students`.
 
-## 3. Frontend
-Open a second terminal in `frontend`:
-```bash
+The local backend uses port 5000 unless configured otherwise.
+
+4. Start the frontend
+
+Open a second terminal from the project root:
+
+cd frontend
 npm install
 npm run dev
-```
-Open the URL printed by Vite (usually `http://localhost:5173`).
 
-## API endpoints
-- `GET /api/health`
-- `GET /api/students?search=&course=&year=`
-- `GET /api/students/:id`
-- `POST /api/students`
-- `PUT /api/students/:id`
-- `DELETE /api/students/:id`
+Open the local URL printed by Vite.
 
-## Submission checklist
-- [ ] Verify Add, View, Update, Delete
-- [ ] Verify search and filters
-- [ ] Test APIs in Postman
-- [ ] Take screenshots of dashboard, student table, create/edit form, API responses, and Neon table
-- [ ] Push source code to GitHub (never commit `.env`)
-- [ ] Include a short demo video if useful (optional according to the task brief)
+🔌 API Endpoints
 
-## Security note
-The built-in admin sign-in is a demonstration UI and does not secure the API. Do not expose real student data or deploy this as a production system without adding server-side authentication/authorization, stronger validation, rate limiting, and secure deployment settings.
+Method   Endpoint              Purpose
+
+GET      /api/health         Health check, if configured
+GET      /api/students       List students
+POST     /api/students       Create a student
+GET      /api/students/:id   Get one student
+PUT      /api/students/:id   Update a student
+DELETE   /api/students/:id   Delete a student
+
+🧪 Testing Checklist
+
+Dashboard loads.
+
+Student data loads from the API/database.
+
+New student can be added and persists after refresh.
+
+Student can be edited and changes persist.
+
+Student can be deleted.
+
+Search and filters work.
+
+CSV export downloads the expected records.
+
+API requests can be tested in Postman.
+
+Invalid form values are handled appropriately.
+
+📸 Application Screenshots
+
+## 📸 Project Screenshots
+
+Click the links below to view the screenshots.
+
+1. [Dashboard](screenshots/01-dashboard.png)
+2. [Student Directory](screenshots/02-student-directory.png)
+3. [Add Student Form](screenshots/03-add-student-form.png)
+4. [Student Added Successfully](screenshots/04-student-added.png)
+5. [Edit Student](screenshots/05-edit-student.png)
+6. [Search and Filter](screenshots/06-search-filter.png)
+7. [CSV Export](screenshots/07-csv-export.png)
+8. [Postman API Response](screenshots/08-postman-api.png)
+9. [Database Records](screenshots/09-database-records.png)
+10. [Project Repository Structure](screenshots/project-structure.png)
+
+🔒 Security Notes
+
+Keep .env files out of Git.
+
+Store database credentials in environment variables.
+
+Use sample/demo data in public screenshots; do not expose private
+student information.
+
+Hide passwords, connection strings, tokens, and secrets in
+screenshots.
+
+Rotate any credential that has accidentally been exposed.
+
+🌐 Deployment
+
+The frontend and backend can be hosted separately with PostgreSQL as the
+database. Configure the frontend API base URL and environment variables
+for deployed services, then test the full application.
+
+Live demo: Add the deployed frontend URL after deployment.
+
+Backend API: Add the deployed API URL after deployment.
+
+Do not add URLs until deployment is complete and tested.
+
+👩‍💻 Author
+
+Ravindi Sandali Perera
+BSc (Hons) Software Engineering
+Cardiff Metropolitan University degree programme through ICBT Campus,
+Sri Lanka
