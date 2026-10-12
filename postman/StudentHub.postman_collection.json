@@ -1,0 +1,98 @@
+{
+  "info": {
+    "_postman_id": "d87d91a8-9c0e-4c1f-82c4-studenthub",
+    "name": "StudentHub API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000"
+    },
+    {
+      "key": "studentId",
+      "value": "1"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health check",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/health"
+      }
+    },
+    {
+      "name": "Get all students",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/students"
+      }
+    },
+    {
+      "name": "Search students",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/students?search=Amal"
+      }
+    },
+    {
+      "name": "Get student by database ID",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/api/students/{{studentId}}"
+      }
+    },
+    {
+      "name": "Create student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"studentId\":\"STU099\",\"firstName\":\"Test\",\"lastName\":\"Student\",\"email\":\"test.student99@example.com\",\"phone\":\"0770000000\",\"dateOfBirth\":\"2004-06-15\",\"gender\":\"Other\",\"course\":\"BSc Software Engineering\",\"yearOfStudy\":1,\"address\":\"Colombo\",\"status\":\"Active\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{baseUrl}}/api/students"
+      }
+    },
+    {
+      "name": "Update student",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"studentId\":\"STU099\",\"firstName\":\"Test\",\"lastName\":\"Student Updated\",\"email\":\"test.student99@example.com\",\"phone\":\"0770000000\",\"dateOfBirth\":\"2004-06-15\",\"gender\":\"Other\",\"course\":\"BSc Software Engineering\",\"yearOfStudy\":2,\"address\":\"Colombo\",\"status\":\"Active\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "{{baseUrl}}/api/students/{{studentId}}"
+      }
+    },
+    {
+      "name": "Delete student",
+      "request": {
+        "method": "DELETE",
+        "url": "{{baseUrl}}/api/students/{{studentId}}"
+      }
+    }
+  ]
+}
