@@ -7,21 +7,23 @@ frontend, Express REST API, and PostgreSQL database.
 
 ✨ Features
 
-Dashboard overview of student records.
+Dashboard with student statistics
 
-Create, view, update, and delete student records.
+View student records
 
-Search and filter students by available course/year fields.
+Add, edit, and delete students
 
-Export the filtered student list to CSV.
+Search student records
 
-Validate student information before saving.
+Filter by course and year of study
 
-Persist student records in PostgreSQL.
+Export student records to CSV
 
-REST API for student operations.
+REST API for student CRUD operations
 
-Clean, light-themed interface.
+PostgreSQL database persistence
+
+Responsive dashboard interface
 
 🛠️ Technology Stack
 
@@ -56,11 +58,8 @@ Visual Studio Code or another code editor
 
 1. Clone the repository
 
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd student-management-system-liteblue
-
-Replace <YOUR_GITHUB_REPOSITORY_URL> with your actual GitHub
-repository URL.
+git clone https://github.com/ravindi5387/Auspify_Task2_StudentManagementSystem.git
+cd Auspify_Task2_StudentManagementSystem
 
 2. Configure the database
 
@@ -155,19 +154,37 @@ Click the links below to view the screenshots.
 
 
 
-🔒 Security Notes
+🧪 Testing Checklist
 
-Keep .env files out of Git.
+Dashboard loads successfully
 
-Store database credentials in environment variables.
+Student records load from the backend
 
-Use sample/demo data in public screenshots; do not expose private
-student information.
+Add a student and refresh to confirm persistence
 
-Hide passwords, connection strings, tokens, and secrets in
-screenshots.
+Edit a student and verify the updated values
 
-Rotate any credential that has accidentally been exposed.
+Delete a test student
+
+Search and filters work
+
+CSV export downloads a file
+
+/api/health reports a connected database
+
+Test API endpoints using Postman
+
+🔐 Environment and Security
+
+Keep database connection strings in environment variables.
+
+Do not commit .env files, passwords, or database credentials.
+
+Set the frontend VITE_API_URL to the backend base URL.
+
+Set backend DATABASE_URL and FRONTEND_ORIGIN in the backend deployment.
+
+Redeploy the frontend after changing Vite environment variables.
 
 🌐 Deployment
 
@@ -175,11 +192,12 @@ The frontend and backend can be hosted separately with PostgreSQL as the
 database. Configure the frontend API base URL and environment variables
 for deployed services, then test the full application.
 
-Live demo: Add the deployed frontend URL after deployment.
+Live demo:[ https://auspify-task2-student-management-sy.vercel.app/](url)
 
-Backend API: Add the deployed API URL after deployment.
+🔧 Backend Health Check:[https://smssystem.vercel.app/api/health?utm_source=chatgpt.com](url)
 
-Do not add URLs until deployment is complete and tested.
+📊 Students API:[https://smssystem.vercel.app/api/students?utm_source=chatgpt.com](url)
+
 
 👩‍💻 Author
 
